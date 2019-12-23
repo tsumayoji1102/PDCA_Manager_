@@ -1,0 +1,867 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		50EC07812A7EF9D91E5E6FCC /* Pods_PDCA_manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67280E9A48CA88E1D98BACF2 /* Pods_PDCA_manager.framework */; };
+		6C2F871D0FFADB0200C9B156 /* Pods_PDCA_managerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3385A6BD78B747A6CED8CE /* Pods_PDCA_managerUITests.framework */; };
+		D038A110D441AF208728B1D9 /* Pods_PDCA_managerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BDF75805740B87984803D8D /* Pods_PDCA_managerTests.framework */; };
+		E71ABE7A236BCE9300E51CAB /* getSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71ABE79236BCE9300E51CAB /* getSize.swift */; };
+		E73C0CF423687D6F00F4D91C /* databaseMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73C0CF323687D6F00F4D91C /* databaseMaker.swift */; };
+		E73C0CF62369A39E00F4D91C /* getLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73C0CF52369A39E00F4D91C /* getLog.swift */; };
+		E73C0CF82369CDDB00F4D91C /* dateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73C0CF72369CDDB00F4D91C /* dateFormat.swift */; };
+		E73C0CFA236B1F0900F4D91C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73C0CF9236B1F0900F4D91C /* HomeViewController.swift */; };
+		E73C0CFC236B1FC000F4D91C /* addPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73C0CFB236B1FC000F4D91C /* addPlanViewController.swift */; };
+		E73C0CFE236B1FD200F4D91C /* planDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73C0CFD236B1FD200F4D91C /* planDetailViewController.swift */; };
+		E73C0D01236B221C00F4D91C /* homeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73C0D00236B221C00F4D91C /* homeViewCell.swift */; };
+		E73C0D03236B224000F4D91C /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E73C0D02236B224000F4D91C /* HomeViewCell.xib */; };
+		E77572B5235AE17400EE3CDE /* DDL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77572B4235AE17400EE3CDE /* DDL.swift */; };
+		E781ECC0238029390056A535 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E781ECBE238029380056A535 /* DatePickerViewController.swift */; };
+		E781ECC523803F880056A535 /* DatePickerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E781ECC423803F880056A535 /* DatePickerView.storyboard */; };
+		E7AC476E2376E7DC00D18CEB /* setColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AC476D2376E7DC00D18CEB /* setColor.swift */; };
+		E7C8E287235454BD00A7F303 /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C8E286235454BD00A7F303 /* FMDB.framework */; };
+		E7C8E2892354561A00A7F303 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C8E2882354561A00A7F303 /* libsqlite3.0.tbd */; };
+		E7CC91F32352F23A00710178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CC91F22352F23A00710178 /* AppDelegate.swift */; };
+		E7CC91F82352F23A00710178 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7CC91F62352F23A00710178 /* Main.storyboard */; };
+		E7CC91FA2352F23B00710178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7CC91F92352F23B00710178 /* Assets.xcassets */; };
+		E7CC91FD2352F23B00710178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7CC91FB2352F23B00710178 /* LaunchScreen.storyboard */; };
+		E7CC92082352F23C00710178 /* PDCA_managerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CC92072352F23C00710178 /* PDCA_managerTests.swift */; };
+		E7CC92132352F23C00710178 /* PDCA_managerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CC92122352F23C00710178 /* PDCA_managerUITests.swift */; };
+		E7CC92222352F51200710178 /* FirstPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CC92212352F51200710178 /* FirstPlan.swift */; };
+		E7CC92272353009D00710178 /* FirstPlanStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CC92262353009D00710178 /* FirstPlanStore.swift */; };
+		E7CC92292353019300710178 /* FirstPlanDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CC92282353019300710178 /* FirstPlanDao.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E7CC92042352F23C00710178 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7CC91E72352F23A00710178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7CC91EE2352F23A00710178;
+			remoteInfo = "PDCA-manager";
+		};
+		E7CC920F2352F23C00710178 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7CC91E72352F23A00710178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7CC91EE2352F23A00710178;
+			remoteInfo = "PDCA-manager";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		058B3595EBE1586C7AA76C59 /* Pods-PDCA-manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDCA-manager.release.xcconfig"; path = "Target Support Files/Pods-PDCA-manager/Pods-PDCA-manager.release.xcconfig"; sourceTree = "<group>"; };
+		3D3385A6BD78B747A6CED8CE /* Pods_PDCA_managerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PDCA_managerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67215F1AADE532624057ABF4 /* Pods-PDCA-managerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDCA-managerUITests.release.xcconfig"; path = "Target Support Files/Pods-PDCA-managerUITests/Pods-PDCA-managerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		67280E9A48CA88E1D98BACF2 /* Pods_PDCA_manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PDCA_manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79D0BAD5C8DDE8EBB8689FE3 /* Pods-PDCA-managerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDCA-managerUITests.debug.xcconfig"; path = "Target Support Files/Pods-PDCA-managerUITests/Pods-PDCA-managerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7BDF75805740B87984803D8D /* Pods_PDCA_managerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PDCA_managerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		969F828051F2513C812BF57C /* Pods-PDCA-manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDCA-manager.debug.xcconfig"; path = "Target Support Files/Pods-PDCA-manager/Pods-PDCA-manager.debug.xcconfig"; sourceTree = "<group>"; };
+		96F2639BB4A503B99D78EE4E /* Pods-PDCA-managerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDCA-managerTests.release.xcconfig"; path = "Target Support Files/Pods-PDCA-managerTests/Pods-PDCA-managerTests.release.xcconfig"; sourceTree = "<group>"; };
+		BBF3E6343F3503E81ABD68D8 /* Pods-PDCA-managerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDCA-managerTests.debug.xcconfig"; path = "Target Support Files/Pods-PDCA-managerTests/Pods-PDCA-managerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E71ABE79236BCE9300E51CAB /* getSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getSize.swift; sourceTree = "<group>"; };
+		E73C0CF323687D6F00F4D91C /* databaseMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = databaseMaker.swift; sourceTree = "<group>"; };
+		E73C0CF52369A39E00F4D91C /* getLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getLog.swift; sourceTree = "<group>"; };
+		E73C0CF72369CDDB00F4D91C /* dateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateFormat.swift; sourceTree = "<group>"; };
+		E73C0CF9236B1F0900F4D91C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E73C0CFB236B1FC000F4D91C /* addPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPlanViewController.swift; sourceTree = "<group>"; };
+		E73C0CFD236B1FD200F4D91C /* planDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = planDetailViewController.swift; sourceTree = "<group>"; };
+		E73C0D00236B221C00F4D91C /* homeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewCell.swift; sourceTree = "<group>"; };
+		E73C0D02236B224000F4D91C /* HomeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
+		E77572B4235AE17400EE3CDE /* DDL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDL.swift; sourceTree = "<group>"; };
+		E781ECBE238029380056A535 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		E781ECC423803F880056A535 /* DatePickerView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DatePickerView.storyboard; sourceTree = "<group>"; };
+		E7AC476D2376E7DC00D18CEB /* setColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setColor.swift; sourceTree = "<group>"; };
+		E7C8E286235454BD00A7F303 /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7C8E2882354561A00A7F303 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		E7CC91EF2352F23A00710178 /* NoBose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoBose.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7CC91F22352F23A00710178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E7CC91F72352F23A00710178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E7CC91F92352F23B00710178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7CC91FC2352F23B00710178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E7CC91FE2352F23B00710178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7CC92032352F23C00710178 /* PDCA-managerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PDCA-managerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7CC92072352F23C00710178 /* PDCA_managerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDCA_managerTests.swift; sourceTree = "<group>"; };
+		E7CC92092352F23C00710178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7CC920E2352F23C00710178 /* PDCA-managerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PDCA-managerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7CC92122352F23C00710178 /* PDCA_managerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDCA_managerUITests.swift; sourceTree = "<group>"; };
+		E7CC92142352F23C00710178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7CC92212352F51200710178 /* FirstPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPlan.swift; sourceTree = "<group>"; };
+		E7CC92262353009D00710178 /* FirstPlanStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPlanStore.swift; sourceTree = "<group>"; };
+		E7CC92282353019300710178 /* FirstPlanDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPlanDao.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E7CC91EC2352F23A00710178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7C8E2892354561A00A7F303 /* libsqlite3.0.tbd in Frameworks */,
+				E7C8E287235454BD00A7F303 /* FMDB.framework in Frameworks */,
+				50EC07812A7EF9D91E5E6FCC /* Pods_PDCA_manager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7CC92002352F23C00710178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D038A110D441AF208728B1D9 /* Pods_PDCA_managerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7CC920B2352F23C00710178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C2F871D0FFADB0200C9B156 /* Pods_PDCA_managerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14E2C3AB3812B1D376120BEF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				969F828051F2513C812BF57C /* Pods-PDCA-manager.debug.xcconfig */,
+				058B3595EBE1586C7AA76C59 /* Pods-PDCA-manager.release.xcconfig */,
+				BBF3E6343F3503E81ABD68D8 /* Pods-PDCA-managerTests.debug.xcconfig */,
+				96F2639BB4A503B99D78EE4E /* Pods-PDCA-managerTests.release.xcconfig */,
+				79D0BAD5C8DDE8EBB8689FE3 /* Pods-PDCA-managerUITests.debug.xcconfig */,
+				67215F1AADE532624057ABF4 /* Pods-PDCA-managerUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C4A096E97579F84FB105939E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7C8E2882354561A00A7F303 /* libsqlite3.0.tbd */,
+				E7C8E286235454BD00A7F303 /* FMDB.framework */,
+				67280E9A48CA88E1D98BACF2 /* Pods_PDCA_manager.framework */,
+				7BDF75805740B87984803D8D /* Pods_PDCA_managerTests.framework */,
+				3D3385A6BD78B747A6CED8CE /* Pods_PDCA_managerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E71ABE78236BCAF800E51CAB /* Universal */ = {
+			isa = PBXGroup;
+			children = (
+				E7CC91F22352F23A00710178 /* AppDelegate.swift */,
+				E73C0CF52369A39E00F4D91C /* getLog.swift */,
+				E73C0CF72369CDDB00F4D91C /* dateFormat.swift */,
+				E71ABE79236BCE9300E51CAB /* getSize.swift */,
+				E7AC476D2376E7DC00D18CEB /* setColor.swift */,
+			);
+			path = Universal;
+			sourceTree = "<group>";
+		};
+		E73C0CFF236B21C900F4D91C /* HomeViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E73C0D00236B221C00F4D91C /* homeViewCell.swift */,
+				E73C0D02236B224000F4D91C /* HomeViewCell.xib */,
+			);
+			path = HomeViewCell;
+			sourceTree = "<group>";
+		};
+		E76C4E6523A51D9E00C6D762 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E77572A52359C71700EE3CDE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E77572AD235A1C6A00EE3CDE /* ViewParts */,
+				E7CC91F62352F23A00710178 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E77572A82359CA1100EE3CDE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E73C0CF9236B1F0900F4D91C /* HomeViewController.swift */,
+				E73C0CFB236B1FC000F4D91C /* addPlanViewController.swift */,
+				E73C0CFD236B1FD200F4D91C /* planDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E77572AD235A1C6A00EE3CDE /* ViewParts */ = {
+			isa = PBXGroup;
+			children = (
+				E781ECBD238028EC0056A535 /* DatePickerView */,
+				E73C0CFF236B21C900F4D91C /* HomeViewCell */,
+			);
+			path = ViewParts;
+			sourceTree = "<group>";
+		};
+		E781ECBD238028EC0056A535 /* DatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				E781ECBE238029380056A535 /* DatePickerViewController.swift */,
+				E781ECC423803F880056A535 /* DatePickerView.storyboard */,
+			);
+			path = DatePickerView;
+			sourceTree = "<group>";
+		};
+		E7CC91E62352F23A00710178 = {
+			isa = PBXGroup;
+			children = (
+				E7CC91F12352F23A00710178 /* PDCA-manager */,
+				E7CC92062352F23C00710178 /* PDCA-managerTests */,
+				E7CC92112352F23C00710178 /* PDCA-managerUITests */,
+				E7CC91F02352F23A00710178 /* Products */,
+				14E2C3AB3812B1D376120BEF /* Pods */,
+				C4A096E97579F84FB105939E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E7CC91F02352F23A00710178 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7CC91EF2352F23A00710178 /* NoBose.app */,
+				E7CC92032352F23C00710178 /* PDCA-managerTests.xctest */,
+				E7CC920E2352F23C00710178 /* PDCA-managerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7CC91F12352F23A00710178 /* PDCA-manager */ = {
+			isa = PBXGroup;
+			children = (
+				E77572A82359CA1100EE3CDE /* ViewController */,
+				E77572A52359C71700EE3CDE /* View */,
+				E76C4E6523A51D9E00C6D762 /* ViewModel */,
+				E7CC92202352F41C00710178 /* Model */,
+				E71ABE78236BCAF800E51CAB /* Universal */,
+				E7CC91F92352F23B00710178 /* Assets.xcassets */,
+				E7CC91FB2352F23B00710178 /* LaunchScreen.storyboard */,
+				E7CC91FE2352F23B00710178 /* Info.plist */,
+			);
+			path = "PDCA-manager";
+			sourceTree = "<group>";
+		};
+		E7CC92062352F23C00710178 /* PDCA-managerTests */ = {
+			isa = PBXGroup;
+			children = (
+				E7CC92072352F23C00710178 /* PDCA_managerTests.swift */,
+				E7CC92092352F23C00710178 /* Info.plist */,
+			);
+			path = "PDCA-managerTests";
+			sourceTree = "<group>";
+		};
+		E7CC92112352F23C00710178 /* PDCA-managerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E7CC92122352F23C00710178 /* PDCA_managerUITests.swift */,
+				E7CC92142352F23C00710178 /* Info.plist */,
+			);
+			path = "PDCA-managerUITests";
+			sourceTree = "<group>";
+		};
+		E7CC92202352F41C00710178 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E7CC92232352F94300710178 /* Plan */,
+				E77572B4235AE17400EE3CDE /* DDL.swift */,
+				E73C0CF323687D6F00F4D91C /* databaseMaker.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E7CC92232352F94300710178 /* Plan */ = {
+			isa = PBXGroup;
+			children = (
+				E7CC92212352F51200710178 /* FirstPlan.swift */,
+				E7CC92262353009D00710178 /* FirstPlanStore.swift */,
+				E7CC92282353019300710178 /* FirstPlanDao.swift */,
+			);
+			path = Plan;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E7CC91EE2352F23A00710178 /* PDCA-manager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7CC92172352F23C00710178 /* Build configuration list for PBXNativeTarget "PDCA-manager" */;
+			buildPhases = (
+				DB6AE9F36638485C81AC3FC8 /* [CP] Check Pods Manifest.lock */,
+				E7CC91EB2352F23A00710178 /* Sources */,
+				E7CC91EC2352F23A00710178 /* Frameworks */,
+				E7CC91ED2352F23A00710178 /* Resources */,
+				4D366BDA0BE4A32A96B417BE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PDCA-manager";
+			productName = "PDCA-manager";
+			productReference = E7CC91EF2352F23A00710178 /* NoBose.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E7CC92022352F23C00710178 /* PDCA-managerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7CC921A2352F23C00710178 /* Build configuration list for PBXNativeTarget "PDCA-managerTests" */;
+			buildPhases = (
+				9CEB48ED198BD42821A4E31B /* [CP] Check Pods Manifest.lock */,
+				E7CC91FF2352F23C00710178 /* Sources */,
+				E7CC92002352F23C00710178 /* Frameworks */,
+				E7CC92012352F23C00710178 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7CC92052352F23C00710178 /* PBXTargetDependency */,
+			);
+			name = "PDCA-managerTests";
+			productName = "PDCA-managerTests";
+			productReference = E7CC92032352F23C00710178 /* PDCA-managerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E7CC920D2352F23C00710178 /* PDCA-managerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7CC921D2352F23C00710178 /* Build configuration list for PBXNativeTarget "PDCA-managerUITests" */;
+			buildPhases = (
+				9C639ED3828391F0D74B1C24 /* [CP] Check Pods Manifest.lock */,
+				E7CC920A2352F23C00710178 /* Sources */,
+				E7CC920B2352F23C00710178 /* Frameworks */,
+				E7CC920C2352F23C00710178 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7CC92102352F23C00710178 /* PBXTargetDependency */,
+			);
+			name = "PDCA-managerUITests";
+			productName = "PDCA-managerUITests";
+			productReference = E7CC920E2352F23C00710178 /* PDCA-managerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E7CC91E72352F23A00710178 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "塩見陵介";
+				TargetAttributes = {
+					E7CC91EE2352F23A00710178 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					E7CC92022352F23C00710178 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = E7CC91EE2352F23A00710178;
+					};
+					E7CC920D2352F23C00710178 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = E7CC91EE2352F23A00710178;
+					};
+				};
+			};
+			buildConfigurationList = E7CC91EA2352F23A00710178 /* Build configuration list for PBXProject "PDCA-manager" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E7CC91E62352F23A00710178;
+			productRefGroup = E7CC91F02352F23A00710178 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E7CC91EE2352F23A00710178 /* PDCA-manager */,
+				E7CC92022352F23C00710178 /* PDCA-managerTests */,
+				E7CC920D2352F23C00710178 /* PDCA-managerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E7CC91ED2352F23A00710178 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7CC91FD2352F23B00710178 /* LaunchScreen.storyboard in Resources */,
+				E73C0D03236B224000F4D91C /* HomeViewCell.xib in Resources */,
+				E7CC91FA2352F23B00710178 /* Assets.xcassets in Resources */,
+				E7CC91F82352F23A00710178 /* Main.storyboard in Resources */,
+				E781ECC523803F880056A535 /* DatePickerView.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7CC92012352F23C00710178 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7CC920C2352F23C00710178 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4D366BDA0BE4A32A96B417BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PDCA-manager/Pods-PDCA-manager-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PDCA-manager/Pods-PDCA-manager-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PDCA-manager/Pods-PDCA-manager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C639ED3828391F0D74B1C24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PDCA-managerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CEB48ED198BD42821A4E31B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PDCA-managerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB6AE9F36638485C81AC3FC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PDCA-manager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E7CC91EB2352F23A00710178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7CC92222352F51200710178 /* FirstPlan.swift in Sources */,
+				E77572B5235AE17400EE3CDE /* DDL.swift in Sources */,
+				E73C0CF82369CDDB00F4D91C /* dateFormat.swift in Sources */,
+				E71ABE7A236BCE9300E51CAB /* getSize.swift in Sources */,
+				E7AC476E2376E7DC00D18CEB /* setColor.swift in Sources */,
+				E73C0CF62369A39E00F4D91C /* getLog.swift in Sources */,
+				E73C0CFE236B1FD200F4D91C /* planDetailViewController.swift in Sources */,
+				E73C0D01236B221C00F4D91C /* homeViewCell.swift in Sources */,
+				E7CC91F32352F23A00710178 /* AppDelegate.swift in Sources */,
+				E73C0CFC236B1FC000F4D91C /* addPlanViewController.swift in Sources */,
+				E73C0CFA236B1F0900F4D91C /* HomeViewController.swift in Sources */,
+				E781ECC0238029390056A535 /* DatePickerViewController.swift in Sources */,
+				E73C0CF423687D6F00F4D91C /* databaseMaker.swift in Sources */,
+				E7CC92292353019300710178 /* FirstPlanDao.swift in Sources */,
+				E7CC92272353009D00710178 /* FirstPlanStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7CC91FF2352F23C00710178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7CC92082352F23C00710178 /* PDCA_managerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7CC920A2352F23C00710178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7CC92132352F23C00710178 /* PDCA_managerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E7CC92052352F23C00710178 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7CC91EE2352F23A00710178 /* PDCA-manager */;
+			targetProxy = E7CC92042352F23C00710178 /* PBXContainerItemProxy */;
+		};
+		E7CC92102352F23C00710178 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7CC91EE2352F23A00710178 /* PDCA-manager */;
+			targetProxy = E7CC920F2352F23C00710178 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E7CC91F62352F23A00710178 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7CC91F72352F23A00710178 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E7CC91FB2352F23B00710178 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7CC91FC2352F23B00710178 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E7CC92152352F23C00710178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E7CC92162352F23C00710178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E7CC92182352F23C00710178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 969F828051F2513C812BF57C /* Pods-PDCA-manager.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HUDNR7MJW2;
+				INFOPLIST_FILE = "PDCA-manager/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "moment-develops.PDCA-manager";
+				PRODUCT_NAME = NoBose;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		E7CC92192352F23C00710178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 058B3595EBE1586C7AA76C59 /* Pods-PDCA-manager.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HUDNR7MJW2;
+				INFOPLIST_FILE = "PDCA-manager/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "moment-develops.PDCA-manager";
+				PRODUCT_NAME = NoBose;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		E7CC921B2352F23C00710178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBF3E6343F3503E81ABD68D8 /* Pods-PDCA-managerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HUDNR7MJW2;
+				INFOPLIST_FILE = "PDCA-managerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "moment-develops.PDCA-managerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PDCA-manager.app/PDCA-manager";
+			};
+			name = Debug;
+		};
+		E7CC921C2352F23C00710178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96F2639BB4A503B99D78EE4E /* Pods-PDCA-managerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HUDNR7MJW2;
+				INFOPLIST_FILE = "PDCA-managerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "moment-develops.PDCA-managerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PDCA-manager.app/PDCA-manager";
+			};
+			name = Release;
+		};
+		E7CC921E2352F23C00710178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79D0BAD5C8DDE8EBB8689FE3 /* Pods-PDCA-managerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HUDNR7MJW2;
+				INFOPLIST_FILE = "PDCA-managerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "moment-develops.PDCA-managerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "PDCA-manager";
+			};
+			name = Debug;
+		};
+		E7CC921F2352F23C00710178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67215F1AADE532624057ABF4 /* Pods-PDCA-managerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HUDNR7MJW2;
+				INFOPLIST_FILE = "PDCA-managerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "moment-develops.PDCA-managerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "PDCA-manager";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E7CC91EA2352F23A00710178 /* Build configuration list for PBXProject "PDCA-manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7CC92152352F23C00710178 /* Debug */,
+				E7CC92162352F23C00710178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7CC92172352F23C00710178 /* Build configuration list for PBXNativeTarget "PDCA-manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7CC92182352F23C00710178 /* Debug */,
+				E7CC92192352F23C00710178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7CC921A2352F23C00710178 /* Build configuration list for PBXNativeTarget "PDCA-managerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7CC921B2352F23C00710178 /* Debug */,
+				E7CC921C2352F23C00710178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7CC921D2352F23C00710178 /* Build configuration list for PBXNativeTarget "PDCA-managerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7CC921E2352F23C00710178 /* Debug */,
+				E7CC921F2352F23C00710178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E7CC91E72352F23A00710178 /* Project object */;
+}

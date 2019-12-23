@@ -1,0 +1,36 @@
+PODS:
+  - FMDB/FTS (2.7.5):
+    - FMDB/standard
+  - FMDB/standard (2.7.5)
+  - R.swift (5.0.3):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.1)
+  - Realm (3.17.0):
+    - Realm/Headers (= 3.17.0)
+  - Realm/Headers (3.17.0)
+  - RealmSwift (3.17.0):
+    - Realm (= 3.17.0)
+
+DEPENDENCIES:
+  - FMDB/FTS
+  - R.swift
+  - RealmSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FMDB
+    - R.swift
+    - R.swift.Library
+    - Realm
+    - RealmSwift
+
+SPEC CHECKSUMS:
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  Realm: b30db41ff34fc858ffc25ba8d44a82c164e7ccd0
+  RealmSwift: fe733e459d60dc7b6971d4cbee2eb4854097d12c
+
+PODFILE CHECKSUM: d74ff5d1f1f18798ad98755fbe450442633b61d0
+
+COCOAPODS: 1.7.4

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController {
     
     // タブボタンの判定
     enum openView: Int{
@@ -23,15 +23,21 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     // 変数(このビュー)
-    private var planList:       Array<FirstPlan>!
     private var planTableView:  UITableView!
     private var suggestView:    UIView!
     private var openViewTag:    Int!
     
+    // ViewModel
+    let planViewModel = PlanViewModel.init()
+    
+    // リスト
+    var planList:       Array<Plan>!
     
     
     // メイン
     override func viewDidLoad() {
+        
+        getLog.getLog(message: "viewDidLoad")
         
         /** ナビゲーションバー設定 **/
         homeNavi.title = "プラン一覧"
@@ -55,7 +61,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         
         // 全プランを取得
-        planList = FirstPlanStore.init().readPlanList(caseOfRead: 0, searchWord: nil)
+        planList = planViewModel.readPlan(type:"all", word: nil, compare: nil)
         
         
         // プランがあるならテーブルビューを生成
@@ -93,7 +99,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        getLog.getLog(message: "viewWillAppear")
     }
     
     
@@ -121,94 +127,102 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK: - HomeViewController method
     
     
-    
-    
-    // MARK: - TableView関連
-    
-    
-    // セル個数
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if(planList != nil && planList.count > 0){
-            return planList.count
-            
-        }else{
-            return 0
-        }
-    }
-    
-    
-    // セルの高さ
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        switch(tableView.tag){
-            
-         case openView.planList.rawValue:
-             return 100
-            
-         case openView.setting.rawValue:
-             return 0
-            
-         default:
-             return 0
-        }
-        
-    }
-    
-    
-    // セル設定
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        // プラン一覧の時
-        if(tableView.tag == openView.planList.rawValue){
-            // planを取り出す
-            let plan = planList[indexPath.row]
-            
-            // cellの生成
-            let cell = tableView.dequeueReusableCell(withIdentifier: "HomeViewController", for: indexPath)
-            
-            let screenWidth = UIScreen.main.bounds.size.width
-            
-            // planの生成
-            let view = homeViewCell.init(frame: CGRect.init(x: 10, y: 10, width: screenWidth - 20, height: 80))
-            
-            // planViewの設定
-            view.layer.cornerRadius = 3
-            view.layer.shadowOffset = CGSize(width: 0, height: 2.0)
-            view.layer.shadowColor = UIColor.black.cgColor
-            view.layer.shadowOpacity = 0.6
-            view.layer.shadowRadius = 3
-            
-            // planの要素を書き出す
-            view.planTitle?.text   = plan.planName
-            view.planEndDate?.text = plan.planEndDate
-            
-            cell.addSubview(view)
-            
-            return cell
-            
-        // 設定画面の時
-        }else if(tableView.tag == openView.setting.rawValue){
-            let cell = UITableViewCell.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 30))
-            
-            return cell
-            
-        }else{
-            let cell = UITableViewCell.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 30))
-            
-            return cell
-        }
-  
-    }
-    
-    
+}
 
-    // セルタップ時
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
 
+// MARK: - TableView関連
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
+      // セル個数
+      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+          
+          if(planList != nil && planList.count > 0){
+              return planList.count
+              
+          }else{
+              return 0
+          }
+      }
+      
+      
+      // セルの高さ
+      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+          
+          switch(tableView.tag){
+              
+           case openView.planList.rawValue:
+               return 200
+              
+           case openView.setting.rawValue:
+               return 0
+              
+           default:
+               return 0
+          }
+          
+      }
+      
+      
+      // セル設定
+      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+          
+          // プラン一覧の時
+          if(tableView.tag == openView.planList.rawValue){
+              // planを取り出す
+              let plan = planList[indexPath.row]
+              
+              // cellの生成
+              let cell = tableView.dequeueReusableCell(withIdentifier: "HomeViewController", for: indexPath)
+              
+              let screenWidth  = UIScreen.main.bounds.size.width
+              let screenHeight = UIScreen.main.bounds.size.height
+            
+              
+              // planの生成
+              let view = HomeViewCell.init(frame: CGRect.init(x: 10, y: 10, width: screenWidth - 20, height: 80))
+              
+              // planViewの設定
+              view.layer.cornerRadius = 3
+              view.layer.shadowOffset = CGSize(width: 0, height: 2.0)
+              view.layer.shadowColor = UIColor.black.cgColor
+              view.layer.shadowOpacity = 0.6
+              view.layer.shadowRadius = 3
+            
+              // view内要素の大きさ設定
+            view.planTitle.frame = CGRect.init(x: 10, y: 10, width: view.frame.width * 3 / 4, height: 21)
+            
+            view.planComment.frame = CGRect.init(x: 10, y: 41, width: view.frame.width - 20, height: 42)
+            
+            view.planEndDateView.frame = CGRect.init(x: screenWidth - 215, y: screenHeight - 31, width: 205, height: 21)
+              
+              // planの要素を書き出す
+              view.planTitle?.text   = plan.planName
+              view.planComment.text  = plan.planComment
+              view.planEndDate?.text = dateFormat.dateToStringDayOnly(date: plan.planEndDate)
+              
+              cell.addSubview(view)
+              
+              return cell
+              
+          // 設定画面の時
+          }else if(tableView.tag == openView.setting.rawValue){
+              let cell = UITableViewCell.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 30))
+              
+              return cell
+              
+          }else{
+              let cell = UITableViewCell.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 30))
+              
+              return cell
+          }
     
-    
+      }
+      
+      
+
+      // セルタップ時
+      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+          
+      }
 
 }

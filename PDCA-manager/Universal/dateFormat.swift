@@ -8,12 +8,7 @@
 
 import UIKit
 
-class dateFormat: NSObject {
-    
-    override init(){
-        super.init()
-    }
-    
+class dateFormat {
     
     // 秒単位で取得
     static func dateToString(date: Date) -> String{
@@ -32,6 +27,17 @@ class dateFormat: NSObject {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy年MM月dd日 HH時mm分"
+        let stringDate = dateFormatter.string(from: date)
+        
+        return stringDate
+        
+    }
+    
+    //　Plan用の形式で取得
+    static func dateToStringDayOnly(date: Date) -> String{
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy年MM月dd日"
         let stringDate = dateFormatter.string(from: date)
         
         return stringDate

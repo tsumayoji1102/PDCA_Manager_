@@ -8,12 +8,7 @@
 
 import UIKit
 
-class getSize: NSObject {
-
-    override init(){
-        super.init()
-    }
-    
+class getSize {
     
     // 画面サイズ取得(tabBarなし)
     static func getScreenSize(naviHeight: CGFloat) ->CGRect{

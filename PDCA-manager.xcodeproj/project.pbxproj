@@ -15,13 +15,18 @@
 		E73C0CF62369A39E00F4D91C /* getLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73C0CF52369A39E00F4D91C /* getLog.swift */; };
 		E73C0CF82369CDDB00F4D91C /* dateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73C0CF72369CDDB00F4D91C /* dateFormat.swift */; };
 		E73C0CFA236B1F0900F4D91C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73C0CF9236B1F0900F4D91C /* HomeViewController.swift */; };
-		E73C0CFC236B1FC000F4D91C /* addPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73C0CFB236B1FC000F4D91C /* addPlanViewController.swift */; };
-		E73C0CFE236B1FD200F4D91C /* planDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73C0CFD236B1FD200F4D91C /* planDetailViewController.swift */; };
+		E73C0CFC236B1FC000F4D91C /* AddPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73C0CFB236B1FC000F4D91C /* AddPlanViewController.swift */; };
+		E73C0CFE236B1FD200F4D91C /* PlanDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73C0CFD236B1FD200F4D91C /* PlanDetailViewController.swift */; };
 		E73C0D01236B221C00F4D91C /* homeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73C0D00236B221C00F4D91C /* homeViewCell.swift */; };
 		E73C0D03236B224000F4D91C /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E73C0D02236B224000F4D91C /* HomeViewCell.xib */; };
+		E73E238823BAE3CE00D4E7C9 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E73E238723BAE3CE00D4E7C9 /* Realm.framework */; };
+		E73E238C23BAE3D300D4E7C9 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E73E238B23BAE3D300D4E7C9 /* RealmSwift.framework */; };
+		E754BA1923B11E2A00FC7EAF /* PlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E754BA1823B11E2A00FC7EAF /* PlanViewModel.swift */; };
 		E77572B5235AE17400EE3CDE /* DDL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77572B4235AE17400EE3CDE /* DDL.swift */; };
 		E781ECC0238029390056A535 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E781ECBE238029380056A535 /* DatePickerViewController.swift */; };
 		E781ECC523803F880056A535 /* DatePickerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E781ECC423803F880056A535 /* DatePickerView.storyboard */; };
+		E789723B23B25E4800A006EE /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = E789723A23B25E4800A006EE /* Plan.swift */; };
+		E789723D23B25EAE00A006EE /* PlanDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = E789723C23B25EAE00A006EE /* PlanDao.swift */; };
 		E7AC476E2376E7DC00D18CEB /* setColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AC476D2376E7DC00D18CEB /* setColor.swift */; };
 		E7C8E287235454BD00A7F303 /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C8E286235454BD00A7F303 /* FMDB.framework */; };
 		E7C8E2892354561A00A7F303 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C8E2882354561A00A7F303 /* libsqlite3.0.tbd */; };
@@ -68,13 +73,20 @@
 		E73C0CF52369A39E00F4D91C /* getLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getLog.swift; sourceTree = "<group>"; };
 		E73C0CF72369CDDB00F4D91C /* dateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateFormat.swift; sourceTree = "<group>"; };
 		E73C0CF9236B1F0900F4D91C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		E73C0CFB236B1FC000F4D91C /* addPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPlanViewController.swift; sourceTree = "<group>"; };
-		E73C0CFD236B1FD200F4D91C /* planDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = planDetailViewController.swift; sourceTree = "<group>"; };
+		E73C0CFB236B1FC000F4D91C /* AddPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlanViewController.swift; sourceTree = "<group>"; };
+		E73C0CFD236B1FD200F4D91C /* PlanDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDetailViewController.swift; sourceTree = "<group>"; };
 		E73C0D00236B221C00F4D91C /* homeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewCell.swift; sourceTree = "<group>"; };
 		E73C0D02236B224000F4D91C /* HomeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
+		E73E238023BAE31600D4E7C9 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E73E238423BAE31B00D4E7C9 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E73E238723BAE3CE00D4E7C9 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E73E238B23BAE3D300D4E7C9 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E754BA1823B11E2A00FC7EAF /* PlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewModel.swift; sourceTree = "<group>"; };
 		E77572B4235AE17400EE3CDE /* DDL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDL.swift; sourceTree = "<group>"; };
 		E781ECBE238029380056A535 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		E781ECC423803F880056A535 /* DatePickerView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DatePickerView.storyboard; sourceTree = "<group>"; };
+		E789723A23B25E4800A006EE /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
+		E789723C23B25EAE00A006EE /* PlanDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDao.swift; sourceTree = "<group>"; };
 		E7AC476D2376E7DC00D18CEB /* setColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setColor.swift; sourceTree = "<group>"; };
 		E7C8E286235454BD00A7F303 /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C8E2882354561A00A7F303 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -100,6 +112,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E73E238823BAE3CE00D4E7C9 /* Realm.framework in Frameworks */,
+				E73E238C23BAE3D300D4E7C9 /* RealmSwift.framework in Frameworks */,
 				E7C8E2892354561A00A7F303 /* libsqlite3.0.tbd in Frameworks */,
 				E7C8E287235454BD00A7F303 /* FMDB.framework in Frameworks */,
 				50EC07812A7EF9D91E5E6FCC /* Pods_PDCA_manager.framework in Frameworks */,
@@ -141,6 +155,10 @@
 		C4A096E97579F84FB105939E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E73E238B23BAE3D300D4E7C9 /* RealmSwift.framework */,
+				E73E238723BAE3CE00D4E7C9 /* Realm.framework */,
+				E73E238423BAE31B00D4E7C9 /* RealmSwift.framework */,
+				E73E238023BAE31600D4E7C9 /* Realm.framework */,
 				E7C8E2882354561A00A7F303 /* libsqlite3.0.tbd */,
 				E7C8E286235454BD00A7F303 /* FMDB.framework */,
 				67280E9A48CA88E1D98BACF2 /* Pods_PDCA_manager.framework */,
@@ -171,9 +189,28 @@
 			path = HomeViewCell;
 			sourceTree = "<group>";
 		};
+		E73E238E23BE5F4C00D4E7C9 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				E789723923B25E2A00A006EE /* Plan */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		E73E238F23BE5F6300D4E7C9 /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				E73C0CF323687D6F00F4D91C /* databaseMaker.swift */,
+				E77572B4235AE17400EE3CDE /* DDL.swift */,
+				E7CC92232352F94300710178 /* FirstPlan */,
+			);
+			path = SQLite;
+			sourceTree = "<group>";
+		};
 		E76C4E6523A51D9E00C6D762 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E754BA1823B11E2A00FC7EAF /* PlanViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -191,8 +228,8 @@
 			isa = PBXGroup;
 			children = (
 				E73C0CF9236B1F0900F4D91C /* HomeViewController.swift */,
-				E73C0CFB236B1FC000F4D91C /* addPlanViewController.swift */,
-				E73C0CFD236B1FD200F4D91C /* planDetailViewController.swift */,
+				E73C0CFB236B1FC000F4D91C /* AddPlanViewController.swift */,
+				E73C0CFD236B1FD200F4D91C /* PlanDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -213,6 +250,15 @@
 				E781ECC423803F880056A535 /* DatePickerView.storyboard */,
 			);
 			path = DatePickerView;
+			sourceTree = "<group>";
+		};
+		E789723923B25E2A00A006EE /* Plan */ = {
+			isa = PBXGroup;
+			children = (
+				E789723A23B25E4800A006EE /* Plan.swift */,
+				E789723C23B25EAE00A006EE /* PlanDao.swift */,
+			);
+			path = Plan;
 			sourceTree = "<group>";
 		};
 		E7CC91E62352F23A00710178 = {
@@ -273,21 +319,20 @@
 		E7CC92202352F41C00710178 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E7CC92232352F94300710178 /* Plan */,
-				E77572B4235AE17400EE3CDE /* DDL.swift */,
-				E73C0CF323687D6F00F4D91C /* databaseMaker.swift */,
+				E73E238E23BE5F4C00D4E7C9 /* Realm */,
+				E73E238F23BE5F6300D4E7C9 /* SQLite */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		E7CC92232352F94300710178 /* Plan */ = {
+		E7CC92232352F94300710178 /* FirstPlan */ = {
 			isa = PBXGroup;
 			children = (
 				E7CC92212352F51200710178 /* FirstPlan.swift */,
 				E7CC92262353009D00710178 /* FirstPlanStore.swift */,
 				E7CC92282353019300710178 /* FirstPlanDao.swift */,
 			);
-			path = Plan;
+			path = FirstPlan;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -514,15 +559,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7CC92222352F51200710178 /* FirstPlan.swift in Sources */,
+				E754BA1923B11E2A00FC7EAF /* PlanViewModel.swift in Sources */,
 				E77572B5235AE17400EE3CDE /* DDL.swift in Sources */,
 				E73C0CF82369CDDB00F4D91C /* dateFormat.swift in Sources */,
+				E789723B23B25E4800A006EE /* Plan.swift in Sources */,
 				E71ABE7A236BCE9300E51CAB /* getSize.swift in Sources */,
 				E7AC476E2376E7DC00D18CEB /* setColor.swift in Sources */,
 				E73C0CF62369A39E00F4D91C /* getLog.swift in Sources */,
-				E73C0CFE236B1FD200F4D91C /* planDetailViewController.swift in Sources */,
+				E73C0CFE236B1FD200F4D91C /* PlanDetailViewController.swift in Sources */,
+				E789723D23B25EAE00A006EE /* PlanDao.swift in Sources */,
 				E73C0D01236B221C00F4D91C /* homeViewCell.swift in Sources */,
 				E7CC91F32352F23A00710178 /* AppDelegate.swift in Sources */,
-				E73C0CFC236B1FC000F4D91C /* addPlanViewController.swift in Sources */,
+				E73C0CFC236B1FC000F4D91C /* AddPlanViewController.swift in Sources */,
 				E73C0CFA236B1F0900F4D91C /* HomeViewController.swift in Sources */,
 				E781ECC0238029390056A535 /* DatePickerViewController.swift in Sources */,
 				E73C0CF423687D6F00F4D91C /* databaseMaker.swift in Sources */,

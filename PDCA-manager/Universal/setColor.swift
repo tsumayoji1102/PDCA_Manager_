@@ -8,12 +8,6 @@
 
 import UIKit
 
-class setColor: NSObject {
-    
-    override init() {
-        super.init()
-    }
-    
-    
+class setColor {
 
 }

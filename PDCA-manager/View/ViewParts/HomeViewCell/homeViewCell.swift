@@ -8,10 +8,12 @@
 
 import UIKit
 
-class homeViewCell: UIView {
+class HomeViewCell: UIView {
 
-    @IBOutlet weak var planTitle:   UILabel!
-    @IBOutlet weak var planEndDate: UILabel!
+    @IBOutlet weak var planTitle:      UILabel!
+    @IBOutlet weak var planComment:    UILabel!
+    @IBOutlet weak var planEndDate:    UILabel!
+    @IBOutlet weak var planEndDateView: UIView!
     
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performanceduring animation.

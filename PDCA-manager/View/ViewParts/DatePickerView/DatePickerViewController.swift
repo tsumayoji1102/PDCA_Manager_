@@ -10,6 +10,7 @@ import UIKit
 
 class DatePickerViewController: UIViewController {
     
+    @IBOutlet weak var datePickerView: UIView!
     @IBOutlet weak var datePickerForButton: UIDatePicker!
     @IBOutlet weak var settingButton:       UIButton!
     @IBOutlet weak var closeButton:         UIButton!
@@ -25,8 +26,20 @@ class DatePickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.frame.size.width = UIScreen.main.bounds.size.width - 20
+        let viewHeight = UIScreen.main.bounds.size.height * 3 / 7
         
+        datePickerView.frame = CGRect.init(
+            x: 20, y: UIScreen.main.bounds.size.height - viewHeight - 20, width: UIScreen.main.bounds.size.width - 40, height: viewHeight)
+        
+        datePickerView.layer.cornerRadius = 10
+        
+        datePickerForButton.frame = CGRect.init(x: 0, y: datePickerView.frame.height / 5, width: datePickerView.frame.width, height: datePickerView.frame.height * 3 / 5)
+        
+        settingButton.frame = CGRect.init(x: 10, y: 10, width: 150, height: 40)
+        
+        closeButton.frame = CGRect.init(x: UIScreen.main.bounds.size.width - 100, y: 0, width: 60 ,height: 50)
+        
+        OKButton.frame = CGRect.init(x: datePickerView.frame.width / 2 - 17.5, y: datePickerView.frame.height * 9 / 10 - 30, width: 35, height: 40)
 
         settingButton.addTarget(self, action: #selector(tapDecideSevenDays(_:)), for: UIControl.Event.touchUpInside)
         
@@ -91,9 +104,7 @@ class DatePickerViewController: UIViewController {
     // settingButton設定時(一週間後に設定)
     @objc private func tapDecideSevenDays(_ button: UIButton){
         
-        //let nowDate = Date()
-        
-        let sevenDate = Calendar.current.date(bySetting: .day, value: 7, of: currentButtonDate)
+        let sevenDate = Calendar.current.date(bySetting: .day, value: 7, of: Date())
         
         datePickerForButton.date = sevenDate!
         
@@ -144,9 +155,9 @@ class DatePickerViewController: UIViewController {
         presentingVC = self.presentingViewController
         
         // 遷移元で分岐
-        if presentingVC == presentingVC as? addPlanViewController{
+        if presentingVC == presentingVC as? AddPlanViewController{
             
-          let VC = presentingVC as? addPlanViewController
+          let VC = presentingVC as? AddPlanViewController
             
           if (VC?.opacityBackground != nil){
                 VC?.opacityBackground.isHidden = true
@@ -154,6 +165,7 @@ class DatePickerViewController: UIViewController {
             
           // 日付をセットしない場合
           if !setDate{
+            VC?.doneOKStatus()
             // 前の画面に遷移
             self.dismiss(animated: true, completion: {})
           }
@@ -179,6 +191,8 @@ class DatePickerViewController: UIViewController {
               default:
                   break
           }
+            
+          VC?.doneOKStatus()
         }
         
         // 前の画面に遷移

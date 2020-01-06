@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,15 +20,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // 初回起動に関する設定ができる
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        // createを行う
-        let ddl = DDL.init().createSql()
-        
-        if ddl{
-            getLog.getErrorLog(message: "create成功")
+        // realmのマイグレーション
+        let config = Realm.Configuration(
+          
+          schemaVersion: 1,
+
+          migrationBlock: { migration, oldSchemaVersion in
             
-        }else{
-            getLog.getErrorLog(message: "create失敗")
-        }
+            if (oldSchemaVersion < 1) {
+              
+            }
+        })
+
+        // デフォルトRealmに新しい設定を適用
+        Realm.Configuration.defaultConfiguration = config
+
+       
+        let realm = try! Realm()
+        print("\(realm) :Realmオブジェクト")
+    print(Realm.Configuration.defaultConfiguration.fileURL!)
         
         /** 後で編集(初回起動時の処理)
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
@@ -39,10 +50,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let ddl = DDL.init().createSql()
             
             if ddl{
-                getLog.getErrorLog(message: "create成功")
+                getLog.getLog(message: "create成功")
                 
             }else{
-                getLog.getErrorLog(message: "create失敗")
+                getLog.getLog(message: "create失敗")
             }
             
         }else{

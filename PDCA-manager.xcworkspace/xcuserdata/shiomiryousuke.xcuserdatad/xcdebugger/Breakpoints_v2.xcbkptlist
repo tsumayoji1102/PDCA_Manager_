@@ -14,8 +14,8 @@
             filePath = "PDCA-manager/View/ViewParts/DatePickerView/DatePickerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "decideDate(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "PDCA-manager/View/ViewParts/DatePickerView/DatePickerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "DatePickerViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -46,57 +46,10 @@
             filePath = "PDCA-manager/View/ViewParts/DatePickerView/DatePickerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
             landmarkName = "selectVCForDismiss(setDate:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "649E1748-9C6D-46B1-82DB-402ACF718C8C - 41f9124eb954377a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "NoBose.DatePickerViewController.selectVCForDismiss(setDate: Swift.Bool) -&gt; ()"
-                  moduleName = "NoBose"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shiomiryousuke/Desktop/iOS_development/PDCA-manager/PDCA-manager/View/ViewParts/DatePickerView/DatePickerViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "175"
-                  endingLineNumber = "175"
-                  offsetFromSymbolStart = "2804">
-               </Location>
-               <Location
-                  uuid = "649E1748-9C6D-46B1-82DB-402ACF718C8C - 41f9124eb954377a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "NoBose.DatePickerViewController.selectVCForDismiss(setDate: Swift.Bool) -&gt; ()"
-                  moduleName = "NoBose"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shiomiryousuke/Desktop/iOS_development/PDCA-manager/PDCA-manager/View/ViewParts/DatePickerView/DatePickerViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "175"
-                  endingLineNumber = "175"
-                  offsetFromSymbolStart = "2819">
-               </Location>
-               <Location
-                  uuid = "649E1748-9C6D-46B1-82DB-402ACF718C8C - 41f9124eb954377a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "NoBose.DatePickerViewController.selectVCForDismiss(setDate: Swift.Bool) -&gt; ()"
-                  moduleName = "NoBose"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shiomiryousuke/Desktop/iOS_development/PDCA-manager/PDCA-manager/View/ViewParts/DatePickerView/DatePickerViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "175"
-                  endingLineNumber = "175"
-                  offsetFromSymbolStart = "3835">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -109,8 +62,8 @@
             filePath = "PDCA-manager/View/ViewParts/DatePickerView/DatePickerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
             landmarkName = "selectVCForDismiss(setDate:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -125,8 +78,8 @@
             filePath = "PDCA-manager/View/ViewParts/DatePickerView/DatePickerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
             landmarkName = "selectVCForDismiss(setDate:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -141,41 +94,9 @@
             filePath = "PDCA-manager/View/ViewParts/DatePickerView/DatePickerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
             landmarkName = "selectVCForDismiss(setDate:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4C89A13C-8E60-49FD-9DC1-D9556852AFED"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PDCA-manager/View/ViewParts/DatePickerView/DatePickerViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8E49B123-04E8-461B-93C8-CAB0101E4AA9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PDCA-manager/ViewController/addPlanViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "segueToDatePickerView(buttonName:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -191,71 +112,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "126"
             endingLineNumber = "126"
-            landmarkName = "tapSelectDate(_sender:)"
+            landmarkName = "tapDoneButton(_:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "87107B35-65DA-4387-B4D6-1962A933EE88"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PDCA-manager/ViewController/addPlanViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "tapSelectDate(_sender:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "87107B35-65DA-4387-B4D6-1962A933EE88 - 81dce3d6d10df22f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "NoBose.addPlanViewController.(tapSelectDate in _F66841D9FFA37D132EA297CBAADCE46E)(_sender: __C.UIButton) -&gt; ()"
-                  moduleName = "NoBose"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shiomiryousuke/Desktop/iOS_development/PDCA-manager/PDCA-manager/ViewController/addPlanViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "121"
-                  endingLineNumber = "121"
-                  offsetFromSymbolStart = "272">
-               </Location>
-               <Location
-                  uuid = "87107B35-65DA-4387-B4D6-1962A933EE88 - 81dce3d6d10df22f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "NoBose.addPlanViewController.(tapSelectDate in _F66841D9FFA37D132EA297CBAADCE46E)(_sender: __C.UIButton) -&gt; ()"
-                  moduleName = "NoBose"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shiomiryousuke/Desktop/iOS_development/PDCA-manager/PDCA-manager/ViewController/addPlanViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "121"
-                  endingLineNumber = "121"
-                  offsetFromSymbolStart = "339">
-               </Location>
-               <Location
-                  uuid = "87107B35-65DA-4387-B4D6-1962A933EE88 - 81dce3d6d10df22f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "NoBose.addPlanViewController.(tapSelectDate in _F66841D9FFA37D132EA297CBAADCE46E)(_sender: __C.UIButton) -&gt; ()"
-                  moduleName = "NoBose"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shiomiryousuke/Desktop/iOS_development/PDCA-manager/PDCA-manager/ViewController/addPlanViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "121"
-                  endingLineNumber = "121"
-                  offsetFromSymbolStart = "446">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

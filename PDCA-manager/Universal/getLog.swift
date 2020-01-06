@@ -8,20 +8,13 @@
 
 import UIKit
 
-class getLog: NSObject {
-    
-    override init(){
-        super.init()
-    }
-    
-    deinit {
-    }
+class getLog {
     
     // エラーログを取得(メソッド)
-    static func getErrorLog(message:     Any = "",
-                            function: String = #function,
-                            file:     String = #file,
-                            line:     Int    = #line)
+    static func getLog(message:     Any = "",
+                       function: String = #function,
+                       file:     String = #file,
+                       line:     Int    = #line)
     {
         
         let fileName = file
@@ -32,6 +25,11 @@ class getLog: NSObject {
         let now = dateFormatter.string(from: Date())
         
         Swift.print("\(fileName): \(function) \(message) (\(line)行目) \(now) ")
+        
+    }
+    
+    
+    static func checkVCmethod(){
         
     }
 
